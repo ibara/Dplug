@@ -117,7 +117,7 @@ nothrow:
     }
 
     /// ditto
-    void setLiftGammaGainContrastRGB(mat3x4f liftGammaGainContrast)
+    void setLiftGammaGainContrastRGB(mat3x4!float liftGammaGainContrast)
     {
         auto m = liftGammaGainContrast;
         setLiftGammaGainContrastRGB(m.c[0][0], m.c[0][1], m.c[0][2], m.c[0][3],
