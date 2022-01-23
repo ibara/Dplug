@@ -348,7 +348,7 @@ int getTotalNumberOfCPUs() nothrow @nogc
             procs = 1;
         return procs;
     }
-    else version(linux)
+    else version(Posix)
     {
         import core.sys.posix.unistd : _SC_NPROCESSORS_ONLN, sysconf;
         return cast(int) sysconf(_SC_NPROCESSORS_ONLN);
